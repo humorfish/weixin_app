@@ -1,12 +1,14 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/authorize/authorize"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#6e6d6b",

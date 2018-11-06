@@ -165,12 +165,17 @@ Page({
     });
     this.getGoodsList(this.data.activeCategoryId);
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  onReachBottom: function () {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+      curPage: this.data.curPage + 1
+    });
+    this.getGoodsList(this.data.activeCategoryId, true)
+  },
+  onPullDownRefresh: function () {
+    console.log('onPullDownRefresh');
+    this.setData({
+      curPage: 1
+    });
+    this.getGoodsList(this.data.activeCategoryId)
   }
 })
